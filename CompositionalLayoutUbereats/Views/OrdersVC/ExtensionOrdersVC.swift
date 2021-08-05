@@ -9,15 +9,21 @@ import Foundation
 import UIKit
 
 extension OrdersViewController: UICollectionViewDelegate , UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        orders.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: OrdersViewController.cellid2, for: indexPath) as! CollectionViewCell
+        cell2.label.textColor = .white
         cell2.backgroundColor = .systemGray
+        cell2.label.textAlignment = .center
+        cell2.label.numberOfLines = 0
+        cell2.label.text = "\(orders[indexPath.item].shopName)\n\(orders[indexPath.item].itemCount)item\n\(orders[indexPath.item].date)*Com"
         return cell2
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("tapped\n\(orders[indexPath.item].shopName)\n\(orders[indexPath.item].itemCount)itme\n\(orders[indexPath.item].date)")
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header2 = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: OrdersViewController.headerid2, for: indexPath) as! HeaderCollectionReusableView

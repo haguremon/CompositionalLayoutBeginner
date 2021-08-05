@@ -10,8 +10,21 @@ import UIKit
 class OrdersViewController: UIViewController {
     static let cellid2 = "cell2"
     static let headerid2 = "header2"
+    
+    var orders: [Order] = [
+        Order(shopName: "aaaaa", itemCount: 1, date: Date()),
+        Order(shopName: "bbbbb", itemCount: 2, date: Date()),
+        Order(shopName: "ccccc", itemCount: 3, date: Date()),
+        Order(shopName: "ddddd", itemCount: 4, date: Date()),
+        Order(shopName: "eeeee", itemCount: 5, date: Date()),
+        Order(shopName: "fffff", itemCount: 6, date: Date())
+    ]
+    
+   
     @IBOutlet weak var collectionView: UICollectionView!
-   private let collectionViewLayout = CollectionViewLayout()
+   
+    private let collectionViewLayout = CollectionViewLayout()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configuration()

@@ -20,6 +20,7 @@ extension BrowseViewController : UICollectionViewDataSource , UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: BrowseViewController.cellid1, for: indexPath) as! CollectionViewCell
         cell1.backgroundColor = .systemGray
+        cell1.label.textAlignment = .center
         cell1.label.textColor = .white
         cell1.label.text = categories[indexPath.item]
         return cell1
