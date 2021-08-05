@@ -21,12 +21,13 @@ class Tab1ViewController: UIViewController {
         super.viewDidLoad()
        
         configuration()
-        //searchBarconfigur()
+        searchBarconfigur()
     }
     func searchBarconfigur() {
         searchBar.layer.cornerRadius = 100
         searchBar.searchTextField.layer.cornerRadius = 100
         searchBar.searchTextField.frame.size.height = 60
+        collectionView.keyboardDismissMode = .onDrag
     }
     func configuration() {
         collectionView.collectionViewLayout = collectionViewLayout.createLayout1()
@@ -37,8 +38,14 @@ class Tab1ViewController: UIViewController {
         collectionView.dataSource = self
     
     }
+    
+    
 
 }
+
+
+
+
 extension Tab1ViewController : UICollectionViewDataSource , UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
