@@ -1,5 +1,5 @@
 //
-//  Header1CollectionReusableView.swift
+//  Tab1CollectionViewCell.swift
 //  CompositionalLayoutBeginner
 //
 //  Created by IwasakIYuta on 2021/08/05.
@@ -7,15 +7,18 @@
 
 import UIKit
 
-class Header1CollectionReusableView: UICollectionReusableView {
+class BrowseCollectionViewCell: UICollectionViewCell {
     
+    static let cellid1 = "cell1"
     let label = UILabel()
+    let image = UIImage()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(label)
+    addSubview(label)
     }
     override func layoutSubviews() {
         super.layoutSubviews()
+        label.textAlignment = .center
         label.frame.size = self.bounds.size
     }
     
@@ -23,6 +26,4 @@ class Header1CollectionReusableView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-        
 }
