@@ -9,9 +9,10 @@ import UIKit
 
 class Tab1ViewController: UIViewController {
     static let header1 = "header1"
-   
-    @IBOutlet weak var searchBar: UISearchBar!
     
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    let categories = ["Jap","Burger","American","Soul Food","Latest"," Rewards","Top Eats","Desserts","Fast Food","Chinese"]
    
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -52,15 +53,18 @@ extension Tab1ViewController : UICollectionViewDataSource , UICollectionViewDele
         2
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: Tab1CollectionViewCell.cellid1, for: indexPath) as! Tab1CollectionViewCell
-        cell1.backgroundColor = .green
-        cell1.label.text = "a"
+        cell1.backgroundColor = .systemGray
+        cell1.label.textColor = .white
+        cell1.label.text = categories[indexPath.item]
         return cell1
     }
+    
+    //viewForSupplementaryをつけることができるヘッダーやフッターなので
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header1 = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
                                                                       withReuseIdentifier: Tab1ViewController.header1,

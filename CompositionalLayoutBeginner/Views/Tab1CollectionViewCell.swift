@@ -11,13 +11,14 @@ class Tab1CollectionViewCell: UICollectionViewCell {
     
     static let cellid1 = "cell1"
     let label = UILabel()
-    
+    let image = UIImage()
     override init(frame: CGRect) {
         super.init(frame: frame)
     addSubview(label)
     }
     override func layoutSubviews() {
         super.layoutSubviews()
+        label.textAlignment = .center
         label.frame.size = self.bounds.size
     }
     
