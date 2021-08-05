@@ -8,8 +8,6 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    
-    static let cellid1 = "cell1"
     let label = UILabel()
     let image = UIImage()
     override init(frame: CGRect) {

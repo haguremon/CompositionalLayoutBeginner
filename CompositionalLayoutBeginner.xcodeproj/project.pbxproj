@@ -13,12 +13,13 @@
 		CF2B7FC726BB962100A19459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2B7FC526BB962100A19459 /* Main.storyboard */; };
 		CF2B7FC926BB962100A19459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2B7FC826BB962100A19459 /* Assets.xcassets */; };
 		CF2B7FCC26BB962100A19459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2B7FCA26BB962100A19459 /* LaunchScreen.storyboard */; };
-		CF2B7FD526BB986600A19459 /* Tab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FD426BB986600A19459 /* Tab2ViewController.swift */; };
+		CF2B7FD526BB986600A19459 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FD426BB986600A19459 /* OrdersViewController.swift */; };
 		CF2B7FD726BB987C00A19459 /* Tab3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FD626BB987C00A19459 /* Tab3ViewController.swift */; };
 		CF2B7FDB26BB9B2E00A19459 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FDA26BB9B2E00A19459 /* CollectionViewLayout.swift */; };
-		CF2B7FDE26BB9CC200A19459 /* BrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FDC26BB9CC200A19459 /* BrowseCollectionViewCell.swift */; };
-		CF2B7FE126BBAA6C00A19459 /* BrowseHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE026BBAA6C00A19459 /* BrowseHeaderCollectionReusableView.swift */; };
-		CF2B7FE526BBCE0200A19459 /* extensionBrowseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE426BBCE0200A19459 /* extensionBrowseVC.swift */; };
+		CF2B7FDE26BB9CC200A19459 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FDC26BB9CC200A19459 /* CollectionViewCell.swift */; };
+		CF2B7FE126BBAA6C00A19459 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */; };
+		CF2B7FE526BBCE0200A19459 /* ExtensionBrowseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE426BBCE0200A19459 /* ExtensionBrowseVC.swift */; };
+		CF2B7FEA26BBE43700A19459 /* ExtensionOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE926BBE43700A19459 /* ExtensionOrdersVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +31,13 @@
 		CF2B7FC826BB962100A19459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF2B7FCB26BB962100A19459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF2B7FCD26BB962100A19459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF2B7FD426BB986600A19459 /* Tab2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2ViewController.swift; sourceTree = "<group>"; };
+		CF2B7FD426BB986600A19459 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		CF2B7FD626BB987C00A19459 /* Tab3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3ViewController.swift; sourceTree = "<group>"; };
 		CF2B7FDA26BB9B2E00A19459 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
-		CF2B7FDC26BB9CC200A19459 /* BrowseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewCell.swift; sourceTree = "<group>"; };
-		CF2B7FE026BBAA6C00A19459 /* BrowseHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
-		CF2B7FE426BBCE0200A19459 /* extensionBrowseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionBrowseVC.swift; sourceTree = "<group>"; };
+		CF2B7FDC26BB9CC200A19459 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		CF2B7FE426BBCE0200A19459 /* ExtensionBrowseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionBrowseVC.swift; sourceTree = "<group>"; };
+		CF2B7FE926BBE43700A19459 /* ExtensionOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionOrdersVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +85,10 @@
 			children = (
 				CF2B7FC526BB962100A19459 /* Main.storyboard */,
 				CF2B7FDA26BB9B2E00A19459 /* CollectionViewLayout.swift */,
+				CF2B7FDC26BB9CC200A19459 /* CollectionViewCell.swift */,
+				CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */,
 				CF2B7FE626BBCE4400A19459 /* BrowseVC */,
-				CF2B7FE726BBCE9D00A19459 /* Tab2VC */,
+				CF2B7FE726BBCE9D00A19459 /* OrdersVC */,
 				CF2B7FE826BBCED100A19459 /* Tab3VC */,
 			);
 			path = Views;
@@ -94,19 +98,18 @@
 			isa = PBXGroup;
 			children = (
 				CF2B7FC326BB962100A19459 /* BrowseViewController.swift */,
-				CF2B7FE426BBCE0200A19459 /* extensionBrowseVC.swift */,
-				CF2B7FDC26BB9CC200A19459 /* BrowseCollectionViewCell.swift */,
-				CF2B7FE026BBAA6C00A19459 /* BrowseHeaderCollectionReusableView.swift */,
+				CF2B7FE426BBCE0200A19459 /* ExtensionBrowseVC.swift */,
 			);
 			path = BrowseVC;
 			sourceTree = "<group>";
 		};
-		CF2B7FE726BBCE9D00A19459 /* Tab2VC */ = {
+		CF2B7FE726BBCE9D00A19459 /* OrdersVC */ = {
 			isa = PBXGroup;
 			children = (
-				CF2B7FD426BB986600A19459 /* Tab2ViewController.swift */,
+				CF2B7FD426BB986600A19459 /* OrdersViewController.swift */,
+				CF2B7FE926BBE43700A19459 /* ExtensionOrdersVC.swift */,
 			);
-			path = Tab2VC;
+			path = OrdersVC;
 			sourceTree = "<group>";
 		};
 		CF2B7FE826BBCED100A19459 /* Tab3VC */ = {
@@ -187,15 +190,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2B7FDE26BB9CC200A19459 /* BrowseCollectionViewCell.swift in Sources */,
+				CF2B7FDE26BB9CC200A19459 /* CollectionViewCell.swift in Sources */,
+				CF2B7FEA26BBE43700A19459 /* ExtensionOrdersVC.swift in Sources */,
 				CF2B7FDB26BB9B2E00A19459 /* CollectionViewLayout.swift in Sources */,
-				CF2B7FE126BBAA6C00A19459 /* BrowseHeaderCollectionReusableView.swift in Sources */,
+				CF2B7FE126BBAA6C00A19459 /* HeaderCollectionReusableView.swift in Sources */,
 				CF2B7FC426BB962100A19459 /* BrowseViewController.swift in Sources */,
 				CF2B7FC026BB962100A19459 /* AppDelegate.swift in Sources */,
 				CF2B7FD726BB987C00A19459 /* Tab3ViewController.swift in Sources */,
 				CF2B7FC226BB962100A19459 /* SceneDelegate.swift in Sources */,
-				CF2B7FD526BB986600A19459 /* Tab2ViewController.swift in Sources */,
-				CF2B7FE526BBCE0200A19459 /* extensionBrowseVC.swift in Sources */,
+				CF2B7FD526BB986600A19459 /* OrdersViewController.swift in Sources */,
+				CF2B7FE526BBCE0200A19459 /* ExtensionBrowseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,21 +9,10 @@ import Foundation
 import UIKit
 
 class CollectionViewLayout {
-    static let headerid = "headerid"
     
-    func createLayout1() ->  UICollectionViewLayout {
-        
-        let layout = UICollectionViewCompositionalLayout { [ weak self ] sectionIndex, environment in
-            
-                return   self?.categories()
-            
-        }
-        
-        return layout
+    static let headerid1 = "headerid1"
     
-    }
-    
-    func categories() -> NSCollectionLayoutSection {
+    func browseCategories() -> NSCollectionLayoutSection {
         
         let item = NSCollectionLayoutItem(layoutSize: .init(
                                             widthDimension: .fractionalWidth(0.5),
@@ -40,12 +29,58 @@ class CollectionViewLayout {
                 .init(layoutSize: .init(
                         widthDimension: .fractionalWidth(0.95),
                         heightDimension: .absolute(60)),
-                      elementKind: CollectionViewLayout.headerid ,
+                      elementKind: CollectionViewLayout.headerid1 ,
                       alignment: .topTrailing)
                 
             ]
         return section
     }
+    
+    func createBrowseLayout() ->  UICollectionViewLayout {
+        
+        let layout = UICollectionViewCompositionalLayout { [ weak self ] sectionIndex, environment in
+            
+                return   self?.browseCategories()
+            
+        }
+        
+        return layout
+    
+    }
+    
+    static let headerid2 = "headerid2"
+    func createOrderLayout() ->  UICollectionViewLayout {
+        
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, environment in
+            
+            let item = NSCollectionLayoutItem(layoutSize: .init(
+                                                widthDimension: .fractionalWidth(1),
+                                                heightDimension: .absolute(90)))
+            item.contentInsets = .init(top: 1, leading: 5, bottom: 0, trailing: 5)
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                            widthDimension: .fractionalWidth(1),
+                                                            heightDimension: .estimated(900)),
+                                                           subitems: [item])
+            group.contentInsets = .init(top: 10, leading: 5, bottom: 0, trailing: 5)
+            let section = NSCollectionLayoutSection(group: group)
+            section.boundarySupplementaryItems =
+                [
+                    .init(layoutSize: .init(
+                            widthDimension: .fractionalWidth(0.95),
+                            heightDimension: .absolute(60)),
+                          elementKind: CollectionViewLayout.headerid2 ,
+                          alignment: .topTrailing)
+                    
+                ]
+            return section
+            
+        }
+        
+        return layout
+    
+    }
+    
+    
     
     
 }

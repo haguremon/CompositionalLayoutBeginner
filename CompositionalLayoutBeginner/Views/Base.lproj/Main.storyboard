@@ -9,34 +9,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Orders View Controller-->
         <scene sceneID="qxy-8X-JfO">
             <objects>
-                <viewController id="Jaa-pC-pma" customClass="Tab2ViewController" customModule="CompositionalLayoutBeginner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jaa-pC-pma" customClass="OrdersViewController" customModule="CompositionalLayoutBeginner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uTF-VJ-BYF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TwS-Hx-rci">
-                                <rect key="frame" x="0.0" y="45" width="375" height="573"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R0s-5R-uIb">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="373" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="50" height="50"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AiY-29-YFt">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell2" reuseIdentifier="cell2" id="AiY-29-YFt" customClass="CollectionViewCell" customModule="CompositionalLayoutBeginner" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="0.0" width="373" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MHg-T3-aSf">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Op-ny-y86">
+                                                    <rect key="frame" x="283" y="49" width="74" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="74" id="axI-T7-LzK"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2Op-ny-y86" firstAttribute="centerY" secondItem="MHg-T3-aSf" secondAttribute="centerY" id="S9U-mZ-GZd"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Op-ny-y86" secondAttribute="trailing" constant="16" id="k4l-30-dg8"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="373" height="128"/>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="os5-mv-V54">
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="headerid2" reuseIdentifier="headerid2" id="os5-mv-V54" customClass="HeaderCollectionReusableView" customModule="CompositionalLayoutBeginner" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="128" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </collectionReusableView>
@@ -45,17 +59,20 @@
                         <viewLayoutGuide key="safeArea" id="DzW-b5-hvQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TwS-Hx-rci" firstAttribute="top" secondItem="DzW-b5-hvQ" secondAttribute="top" constant="45" id="EZ9-Ea-6Yx"/>
-                            <constraint firstItem="TwS-Hx-rci" firstAttribute="leading" secondItem="DzW-b5-hvQ" secondAttribute="leading" id="N5M-Xe-Att"/>
-                            <constraint firstItem="TwS-Hx-rci" firstAttribute="bottom" secondItem="DzW-b5-hvQ" secondAttribute="bottom" id="NVC-Nc-zRb"/>
-                            <constraint firstItem="TwS-Hx-rci" firstAttribute="trailing" secondItem="DzW-b5-hvQ" secondAttribute="trailing" id="WhN-9M-E3u"/>
+                            <constraint firstItem="TwS-Hx-rci" firstAttribute="bottom" secondItem="DzW-b5-hvQ" secondAttribute="bottom" id="0cd-eu-weQ"/>
+                            <constraint firstItem="TwS-Hx-rci" firstAttribute="leading" secondItem="DzW-b5-hvQ" secondAttribute="leading" id="VXx-YR-EvE"/>
+                            <constraint firstItem="TwS-Hx-rci" firstAttribute="top" secondItem="DzW-b5-hvQ" secondAttribute="top" id="oPa-QT-Eph"/>
+                            <constraint firstItem="TwS-Hx-rci" firstAttribute="centerX" secondItem="uTF-VJ-BYF" secondAttribute="centerX" id="yrR-zU-ehm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="98p-Dn-LIc"/>
+                    <navigationItem key="navigationItem" id="4bC-EP-eE3"/>
+                    <connections>
+                        <outlet property="collectionView" destination="TwS-Hx-rci" id="9Cs-Nr-kxS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCN-0n-Cnz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-596" y="291"/>
+            <point key="canvasLocation" x="343.19999999999999" y="290.10494752623691"/>
         </scene>
         <!--Browse-->
         <scene sceneID="Fhh-1I-tkH">
@@ -76,7 +93,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell1" reuseIdentifier="cell1" id="WNT-ga-MFa" customClass="BrowseCollectionViewCell" customModule="CompositionalLayoutBeginner" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell1" reuseIdentifier="cell1" id="WNT-ga-MFa" customClass="CollectionViewCell" customModule="CompositionalLayoutBeginner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yh0-Md-gYa">
@@ -85,7 +102,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="header1" reuseIdentifier="header1" id="EmR-Q0-Dpd" customClass="BrowseHeaderCollectionReusableView" customModule="CompositionalLayoutBeginner" customModuleProvider="target">
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="header1" reuseIdentifier="header1" id="EmR-Q0-Dpd" customClass="HeaderCollectionReusableView" customModule="CompositionalLayoutBeginner" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="128" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </collectionReusableView>
@@ -107,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68L-1x-bGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-749.60000000000002" y="-339.58020989505252"/>
+            <point key="canvasLocation" x="-810" y="-474"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UQH-VW-3vo">
@@ -120,8 +137,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="TjN-m1-euG" kind="relationship" relationship="viewControllers" id="sTr-Ug-flY"/>
-                        <segue destination="Jaa-pC-pma" kind="relationship" relationship="viewControllers" id="MJb-27-dnn"/>
-                        <segue destination="vU6-tx-oi6" kind="relationship" relationship="viewControllers" id="b6w-3s-AmQ"/>
+                        <segue destination="HWr-0o-An6" kind="relationship" relationship="viewControllers" id="kWS-JB-hAo"/>
+                        <segue destination="vU6-tx-oi6" kind="relationship" relationship="viewControllers" id="QPt-Or-zCd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbL-Sa-dfk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -176,6 +193,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lV6-u5-KVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1345" y="803"/>
+        </scene>
+        <!--Orders-->
+        <scene sceneID="SPe-qe-g6b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HWr-0o-An6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Orders" id="98p-Dn-LIc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="boe-Pw-Eur">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jaa-pC-pma" kind="relationship" relationship="rootViewController" id="guH-sk-3fd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvO-4h-X0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-596" y="290.10494752623691"/>
         </scene>
     </scenes>
     <resources>

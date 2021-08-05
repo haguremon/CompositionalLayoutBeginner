@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BrowseHeaderCollectionReusableView: UICollectionReusableView {
+class HeaderCollectionReusableView: UICollectionReusableView {
     
     let label = UILabel()
     override init(frame: CGRect) {

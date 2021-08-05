@@ -8,18 +8,20 @@
 import UIKit
 
 class BrowseViewController: UIViewController {
-    static let header1 = "header1"
-    
+    static let headerid1 = "header1"
+    static let cellid1 = "cell1"
     
     @IBOutlet weak var searchBar: UISearchBar!
+    
     let categories = [
-        "Jap","Burger","American","Soul Food","Latest",
+        
+        "Japanese","Burgers","American","Soul Food","Latest",
         " Rewards","Top Eats","Desserts","Fast Food","Chinese"
     ]
    
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let collectionViewLayout = CollectionViewLayout()
+    private let collectionViewLayout = CollectionViewLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +29,19 @@ class BrowseViewController: UIViewController {
         configuration()
         searchBarconfigur()
     }
-    func searchBarconfigur() {
+    private func searchBarconfigur() {
         searchBar.layer.cornerRadius = 100
         searchBar.searchTextField.layer.cornerRadius = 100
         searchBar.searchTextField.frame.size.height = 60
         collectionView.keyboardDismissMode = .onDrag
     }
-    func configuration() {
-        collectionView.collectionViewLayout = collectionViewLayout.createLayout1()
-        collectionView.register(BrowseCollectionViewCell.self, forCellWithReuseIdentifier: BrowseCollectionViewCell.cellid1)
-        collectionView.register(BrowseHeaderCollectionReusableView.self, forSupplementaryViewOfKind: CollectionViewLayout.headerid, withReuseIdentifier: BrowseViewController.header1)
+    private func configuration() {
+        
+        collectionView.collectionViewLayout = collectionViewLayout.createBrowseLayout()
+
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: BrowseViewController.cellid1)
+        
+        collectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: CollectionViewLayout.headerid1, withReuseIdentifier: BrowseViewController.headerid1)
         
         collectionView.delegate = self
         collectionView.dataSource = self
