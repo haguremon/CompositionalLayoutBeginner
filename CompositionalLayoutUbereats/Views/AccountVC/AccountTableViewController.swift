@@ -13,6 +13,7 @@ class AccountTableViewController: UITableViewController, GetUserInfo {
     
     private var userInfo = [User]()
     private let getUserAPI = GetUserAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getUserAPI.delegate = self
@@ -49,15 +50,26 @@ class AccountTableViewController: UITableViewController, GetUserInfo {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AccountTableViewController.cellid, for: indexPath)
-        cell.backgroundColor = .systemGray
+        let cell = tableView.dequeueReusableCell(withIdentifier: AccountTableViewController.cellid, for: indexPath) as! TableViewCell
+        //cell.backgroundColor = .systemGray
+        
         if indexPath.section == 0 {
-        
-            cell.textLabel?.text = userInfo[indexPath.row].login
-        
+            cell.label.textColor = .black
+            cell.label.textAlignment = .center
+            cell.label.text = userInfo[indexPath.row].login
+            let avatarImage =  userInfo.first?.avatarurl
+            let imageUrl = URL(string: avatarImage!)!
+            let imageData = try! Data(contentsOf: imageUrl)
+            cell.image.image = UIImage(data: imageData)
         }
         
         return cell
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 60
+        }
+        return 50
     }
 
 

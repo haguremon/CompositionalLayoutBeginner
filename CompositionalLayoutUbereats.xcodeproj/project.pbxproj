@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0AA2DF26BC3A7D00DEC67F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA2DE26BC3A7D00DEC67F /* Order.swift */; };
+		CF21E1A226BD6F97002B391D /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21E1A126BD6F97002B391D /* AccountTableViewController.swift */; };
+		CF21E1A526BD71F7002B391D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21E1A426BD71F7002B391D /* Account.swift */; };
+		CF21E1A726BD756D002B391D /* GetUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21E1A626BD756D002B391D /* GetUserInfo.swift */; };
+		CF21E1A926BD96C9002B391D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21E1A826BD96C9002B391D /* TableViewCell.swift */; };
 		CF2B7FC026BB962100A19459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FBF26BB962100A19459 /* AppDelegate.swift */; };
 		CF2B7FC226BB962100A19459 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FC126BB962100A19459 /* SceneDelegate.swift */; };
 		CF2B7FC426BB962100A19459 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FC326BB962100A19459 /* BrowseViewController.swift */; };
@@ -14,7 +19,6 @@
 		CF2B7FC926BB962100A19459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2B7FC826BB962100A19459 /* Assets.xcassets */; };
 		CF2B7FCC26BB962100A19459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2B7FCA26BB962100A19459 /* LaunchScreen.storyboard */; };
 		CF2B7FD526BB986600A19459 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FD426BB986600A19459 /* OrdersViewController.swift */; };
-		CF2B7FD726BB987C00A19459 /* Tab3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FD626BB987C00A19459 /* Tab3ViewController.swift */; };
 		CF2B7FDB26BB9B2E00A19459 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FDA26BB9B2E00A19459 /* CollectionViewLayout.swift */; };
 		CF2B7FDE26BB9CC200A19459 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FDC26BB9CC200A19459 /* CollectionViewCell.swift */; };
 		CF2B7FE126BBAA6C00A19459 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */; };
@@ -23,7 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF2B7FBC26BB962100A19459 /* CompositionalLayoutBeginner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayoutBeginner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0AA2DE26BC3A7D00DEC67F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		CF21E1A126BD6F97002B391D /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		CF21E1A426BD71F7002B391D /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		CF21E1A626BD756D002B391D /* GetUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfo.swift; sourceTree = "<group>"; };
+		CF21E1A826BD96C9002B391D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CF2B7FBC26BB962100A19459 /* CompositionalLayoutUbereats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayoutUbereats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2B7FBF26BB962100A19459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF2B7FC126BB962100A19459 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF2B7FC326BB962100A19459 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -32,7 +41,6 @@
 		CF2B7FCB26BB962100A19459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF2B7FCD26BB962100A19459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF2B7FD426BB986600A19459 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
-		CF2B7FD626BB987C00A19459 /* Tab3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3ViewController.swift; sourceTree = "<group>"; };
 		CF2B7FDA26BB9B2E00A19459 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		CF2B7FDC26BB9CC200A19459 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -51,10 +59,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF0AA2DD26BC3A4800DEC67F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AA2DE26BC3A7D00DEC67F /* Order.swift */,
+				CF21E1A426BD71F7002B391D /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF21E1A326BD711B002B391D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CF21E1A626BD756D002B391D /* GetUserInfo.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		CF2B7FB326BB962100A19459 = {
 			isa = PBXGroup;
 			children = (
-				CF2B7FBE26BB962100A19459 /* CompositionalLayoutBeginner */,
+				CF2B7FBE26BB962100A19459 /* CompositionalLayoutUbereats */,
 				CF2B7FBD26BB962100A19459 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,22 +87,24 @@
 		CF2B7FBD26BB962100A19459 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF2B7FBC26BB962100A19459 /* CompositionalLayoutBeginner.app */,
+				CF2B7FBC26BB962100A19459 /* CompositionalLayoutUbereats.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF2B7FBE26BB962100A19459 /* CompositionalLayoutBeginner */ = {
+		CF2B7FBE26BB962100A19459 /* CompositionalLayoutUbereats */ = {
 			isa = PBXGroup;
 			children = (
 				CF2B7FBF26BB962100A19459 /* AppDelegate.swift */,
 				CF2B7FC126BB962100A19459 /* SceneDelegate.swift */,
+				CF21E1A326BD711B002B391D /* Presenter */,
+				CF0AA2DD26BC3A4800DEC67F /* Model */,
 				CF2B7FD326BB982400A19459 /* Views */,
 				CF2B7FC826BB962100A19459 /* Assets.xcassets */,
 				CF2B7FCA26BB962100A19459 /* LaunchScreen.storyboard */,
 				CF2B7FCD26BB962100A19459 /* Info.plist */,
 			);
-			path = CompositionalLayoutBeginner;
+			path = CompositionalLayoutUbereats;
 			sourceTree = "<group>";
 		};
 		CF2B7FD326BB982400A19459 /* Views */ = {
@@ -89,7 +116,7 @@
 				CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */,
 				CF2B7FE626BBCE4400A19459 /* BrowseVC */,
 				CF2B7FE726BBCE9D00A19459 /* OrdersVC */,
-				CF2B7FE826BBCED100A19459 /* Tab3VC */,
+				CF2B7FE826BBCED100A19459 /* AccountVC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,20 +139,21 @@
 			path = OrdersVC;
 			sourceTree = "<group>";
 		};
-		CF2B7FE826BBCED100A19459 /* Tab3VC */ = {
+		CF2B7FE826BBCED100A19459 /* AccountVC */ = {
 			isa = PBXGroup;
 			children = (
-				CF2B7FD626BB987C00A19459 /* Tab3ViewController.swift */,
+				CF21E1A126BD6F97002B391D /* AccountTableViewController.swift */,
+				CF21E1A826BD96C9002B391D /* TableViewCell.swift */,
 			);
-			path = Tab3VC;
+			path = AccountVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF2B7FBB26BB962100A19459 /* CompositionalLayoutBeginner */ = {
+		CF2B7FBB26BB962100A19459 /* CompositionalLayoutUbereats */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF2B7FD026BB962100A19459 /* Build configuration list for PBXNativeTarget "CompositionalLayoutBeginner" */;
+			buildConfigurationList = CF2B7FD026BB962100A19459 /* Build configuration list for PBXNativeTarget "CompositionalLayoutUbereats" */;
 			buildPhases = (
 				CF2B7FB826BB962100A19459 /* Sources */,
 				CF2B7FB926BB962100A19459 /* Frameworks */,
@@ -135,9 +163,9 @@
 			);
 			dependencies = (
 			);
-			name = CompositionalLayoutBeginner;
+			name = CompositionalLayoutUbereats;
 			productName = CompositionalLayoutBeginner;
-			productReference = CF2B7FBC26BB962100A19459 /* CompositionalLayoutBeginner.app */;
+			productReference = CF2B7FBC26BB962100A19459 /* CompositionalLayoutUbereats.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF2B7FB726BB962100A19459 /* Build configuration list for PBXProject "CompositionalLayoutBeginner" */;
+			buildConfigurationList = CF2B7FB726BB962100A19459 /* Build configuration list for PBXProject "CompositionalLayoutUbereats" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -167,7 +195,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF2B7FBB26BB962100A19459 /* CompositionalLayoutBeginner */,
+				CF2B7FBB26BB962100A19459 /* CompositionalLayoutUbereats */,
 			);
 		};
 /* End PBXProject section */
@@ -193,10 +221,14 @@
 				CF2B7FDE26BB9CC200A19459 /* CollectionViewCell.swift in Sources */,
 				CF2B7FEA26BBE43700A19459 /* ExtensionOrdersVC.swift in Sources */,
 				CF2B7FDB26BB9B2E00A19459 /* CollectionViewLayout.swift in Sources */,
+				CF21E1A226BD6F97002B391D /* AccountTableViewController.swift in Sources */,
 				CF2B7FE126BBAA6C00A19459 /* HeaderCollectionReusableView.swift in Sources */,
+				CF21E1A926BD96C9002B391D /* TableViewCell.swift in Sources */,
+				CF21E1A526BD71F7002B391D /* Account.swift in Sources */,
+				CF21E1A726BD756D002B391D /* GetUserInfo.swift in Sources */,
 				CF2B7FC426BB962100A19459 /* BrowseViewController.swift in Sources */,
+				CF0AA2DF26BC3A7D00DEC67F /* Order.swift in Sources */,
 				CF2B7FC026BB962100A19459 /* AppDelegate.swift in Sources */,
-				CF2B7FD726BB987C00A19459 /* Tab3ViewController.swift in Sources */,
 				CF2B7FC226BB962100A19459 /* SceneDelegate.swift in Sources */,
 				CF2B7FD526BB986600A19459 /* OrdersViewController.swift in Sources */,
 				CF2B7FE526BBCE0200A19459 /* ExtensionBrowseVC.swift in Sources */,
@@ -348,7 +380,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XS2R7967QT;
-				INFOPLIST_FILE = CompositionalLayoutBeginner/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CompositionalLayoutUbereats/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,7 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XS2R7967QT;
-				INFOPLIST_FILE = CompositionalLayoutBeginner/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CompositionalLayoutUbereats/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,7 +414,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF2B7FB726BB962100A19459 /* Build configuration list for PBXProject "CompositionalLayoutBeginner" */ = {
+		CF2B7FB726BB962100A19459 /* Build configuration list for PBXProject "CompositionalLayoutUbereats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF2B7FCE26BB962100A19459 /* Debug */,
@@ -391,7 +423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF2B7FD026BB962100A19459 /* Build configuration list for PBXNativeTarget "CompositionalLayoutBeginner" */ = {
+		CF2B7FD026BB962100A19459 /* Build configuration list for PBXNativeTarget "CompositionalLayoutUbereats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF2B7FD126BB962100A19459 /* Debug */,
