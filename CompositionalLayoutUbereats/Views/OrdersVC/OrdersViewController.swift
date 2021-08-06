@@ -35,6 +35,7 @@ class OrdersViewController: UIViewController {
 
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: OrdersViewController.cellid2)
         collectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: CollectionViewLayout.headerid2, withReuseIdentifier: OrdersViewController.headerid2)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
     

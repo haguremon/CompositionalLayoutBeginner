@@ -7,7 +7,7 @@
 
 import Foundation
 //コアデータとかれなむでもやってみる
-class Order {
+struct Order {
     let shopName: String
     let itemCount: Int
     let date: Date
