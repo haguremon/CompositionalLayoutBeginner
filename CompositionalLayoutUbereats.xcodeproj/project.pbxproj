@@ -24,6 +24,8 @@
 		CF2B7FE126BBAA6C00A19459 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */; };
 		CF2B7FE526BBCE0200A19459 /* ExtensionBrowseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE426BBCE0200A19459 /* ExtensionBrowseVC.swift */; };
 		CF2B7FEA26BBE43700A19459 /* ExtensionOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B7FE926BBE43700A19459 /* ExtensionOrdersVC.swift */; };
+		CFAB34C626BE71E200147599 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB34C526BE71E200147599 /* HomeViewController.swift */; };
+		CFAB34C926BE736000147599 /* ExtensionHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB34C826BE736000147599 /* ExtensionHomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		CF2B7FE426BBCE0200A19459 /* ExtensionBrowseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionBrowseVC.swift; sourceTree = "<group>"; };
 		CF2B7FE926BBE43700A19459 /* ExtensionOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionOrdersVC.swift; sourceTree = "<group>"; };
+		CFAB34C526BE71E200147599 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CFAB34C826BE736000147599 /* ExtensionHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				CF2B7FDA26BB9B2E00A19459 /* CollectionViewLayout.swift */,
 				CF2B7FDC26BB9CC200A19459 /* CollectionViewCell.swift */,
 				CF2B7FE026BBAA6C00A19459 /* HeaderCollectionReusableView.swift */,
+				CFAB34C726BE71E900147599 /* HomeVC */,
 				CF2B7FE626BBCE4400A19459 /* BrowseVC */,
 				CF2B7FE726BBCE9D00A19459 /* OrdersVC */,
 				CF2B7FE826BBCED100A19459 /* AccountVC */,
@@ -146,6 +151,15 @@
 				CF21E1A826BD96C9002B391D /* TableViewCell.swift */,
 			);
 			path = AccountVC;
+			sourceTree = "<group>";
+		};
+		CFAB34C726BE71E900147599 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				CFAB34C526BE71E200147599 /* HomeViewController.swift */,
+				CFAB34C826BE736000147599 /* ExtensionHomeVC.swift */,
+			);
+			path = HomeVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +237,7 @@
 				CF2B7FDB26BB9B2E00A19459 /* CollectionViewLayout.swift in Sources */,
 				CF21E1A226BD6F97002B391D /* AccountTableViewController.swift in Sources */,
 				CF2B7FE126BBAA6C00A19459 /* HeaderCollectionReusableView.swift in Sources */,
+				CFAB34C626BE71E200147599 /* HomeViewController.swift in Sources */,
 				CF21E1A926BD96C9002B391D /* TableViewCell.swift in Sources */,
 				CF21E1A526BD71F7002B391D /* Account.swift in Sources */,
 				CF21E1A726BD756D002B391D /* GetUserInfo.swift in Sources */,
@@ -232,6 +247,7 @@
 				CF2B7FC226BB962100A19459 /* SceneDelegate.swift in Sources */,
 				CF2B7FD526BB986600A19459 /* OrdersViewController.swift in Sources */,
 				CF2B7FE526BBCE0200A19459 /* ExtensionBrowseVC.swift in Sources */,
+				CFAB34C926BE736000147599 /* ExtensionHomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ class CollectionViewLayout {
     
     static let headerid1 = "headerid1"
     
-    func browseCategories() -> NSCollectionLayoutSection {
+    private func browseCategories() -> NSCollectionLayoutSection {
         
         let item = NSCollectionLayoutItem(layoutSize: .init(
                                             widthDimension: .fractionalWidth(0.5),
@@ -79,7 +79,111 @@ class CollectionViewLayout {
         return layout
     
     }
+    static let headerid = "header"
     
+    func createHomeLayout() ->  UICollectionViewLayout {
+        
+        let layout = UICollectionViewCompositionalLayout { [ weak self ]  sectionIndex, environment in
+            
+            if sectionIndex == 0 {
+                
+            return self?.homeCategories()
+            
+            } else if sectionIndex == 3 {
+                    
+                    return self?.scrollhome()
+                }
+            else if sectionIndex == 6 {
+                
+                return self?.scrollHeaderHome()
+            }
+            
+            
+            return self?.createhome1()
+            
+            
+        }
+        
+        return layout
+    
+    }
+    
+    private func createhome1() -> NSCollectionLayoutSection {
+        
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(1),
+                                            heightDimension: .absolute(200)))
+        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                        widthDimension: .fractionalWidth(1),
+                                                        heightDimension: .estimated(1000)),
+                                                       subitems: [item])
+        group.contentInsets = .init(top: 3, leading: 5, bottom: 0, trailing: 5)
+        let section = NSCollectionLayoutSection(group: group)
+        return section
+    }
+    private func homeCategories()->  NSCollectionLayoutSection {
+        
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(0.25), //100%グループの幅
+                                                heightDimension: .fractionalHeight(1)))//100% 125
+            //4　ここでセルの間をあける　三つの高さ200のセルが表示されるため
+            item.contentInsets = .init(top: 10, leading: 1, bottom: 5, trailing: 0)
+            //2 グループを作成　グループのサイズを決める
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                            widthDimension: .fractionalWidth(0.9),//80%fractional（分数）
+                                                            heightDimension: .absolute(90)), //absolute(絶対)125の高さグループ
+                                                           subitems: [item])
+        //1sectionを作成
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets.top = 1
+
+            return section
+            
+        }
+    //Scroll
+    private func scrollhome() -> NSCollectionLayoutSection {
+        
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(1),
+                                            heightDimension: .absolute(150)))
+        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                        widthDimension: .fractionalWidth(1),
+                                                        heightDimension: .estimated(1000)),
+                                                       subitems: [item])
+        group.contentInsets = .init(top: 3, leading: 5, bottom: 0, trailing: 5)
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .paging
+        return section
+    }
+    
+    private func scrollHeaderHome()-> NSCollectionLayoutSection {
+        
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(1),
+                                            heightDimension: .absolute(150)))
+        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                        widthDimension: .fractionalWidth(1),
+                                                        heightDimension: .estimated(1000)),
+                                                       subitems: [item])
+        group.contentInsets = .init(top: 3, leading: 5, bottom: 0, trailing: 5)
+        let section = NSCollectionLayoutSection(group: group)
+                section.boundarySupplementaryItems =
+                    [
+                        .init(layoutSize: .init(
+                                widthDimension: .fractionalWidth(0.95),
+                                heightDimension: .absolute(50)),
+                              elementKind: CollectionViewLayout.headerid ,
+                              alignment: .topTrailing)
+        
+                    ]
+
+        section.orthogonalScrollingBehavior = .paging
+        return section
+    }
     
     
     

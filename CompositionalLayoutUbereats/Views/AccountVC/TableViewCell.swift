@@ -15,6 +15,11 @@ class TableViewCell: UITableViewCell {
         super.awakeFromNib()
         addSubview(label)
         addSubview(image)
+        setViewSize()
+    
+    }
+    private func setViewSize(){
+    
         label.textAlignment = .center
         label.clipsToBounds = true
         label.frame.size = self.bounds.size
@@ -23,7 +28,7 @@ class TableViewCell: UITableViewCell {
         image.frame.size.width = self.bounds.width / 4
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

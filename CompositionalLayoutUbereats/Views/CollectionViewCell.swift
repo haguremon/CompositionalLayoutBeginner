@@ -26,15 +26,17 @@ class CollectionViewCell: UICollectionViewCell {
         setButton()
        
     }
-    func setButton(){
+    private func setButton(){
         
         button.clipsToBounds = true
         //button.contentMode = .center
         button.layer.cornerRadius = 10
+       //x y 苦手　ボタンの場所を指定すつ
         button.frame = CGRect(x: self.frame.maxX - 100,
                               y: self.frame.height - 50,
                               width: self.bounds.width / 4,
                               height: self.bounds.height / 2.5)
+        
         button.addTarget(self, action: #selector(tap), for: UIControl.Event.touchUpInside)
         button.layer.shadowColor = UIColor.black.cgColor
                // 影の方向を設定 （下方向）
@@ -48,7 +50,7 @@ class CollectionViewCell: UICollectionViewCell {
   
       
     @objc func tap(){
-        button.alpha = 0.9
+        button.alpha = 0.95
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.button.alpha = 1
         }

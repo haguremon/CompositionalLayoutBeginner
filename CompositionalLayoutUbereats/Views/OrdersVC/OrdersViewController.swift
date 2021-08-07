@@ -11,7 +11,7 @@ class OrdersViewController: UIViewController {
     static let cellid2 = "cell2"
     static let headerid2 = "header2"
     
-    var orders: [Order] = [
+    private var orders: [Order] = [
         Order(shopName: "aaaaa", itemCount: 1, date: Date()),
         Order(shopName: "bbbbb", itemCount: 2, date: Date()),
         Order(shopName: "ccccc", itemCount: 3, date: Date()),
