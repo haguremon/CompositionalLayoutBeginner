@@ -15,9 +15,13 @@ class TableViewCell: UITableViewCell {
         super.awakeFromNib()
         addSubview(label)
         addSubview(image)
+        label.textAlignment = .center
+        label.clipsToBounds = true
         label.frame.size = self.bounds.size
         image.frame.size.height = self.bounds.height
-        image.frame.size.width = self.bounds.width / 3
+        image.layer.cornerRadius = self.bounds.height
+        image.frame.size.width = self.bounds.width / 4
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
