@@ -13,7 +13,7 @@ class BrowseViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let categories = [
+     let categories = [
         
         "Japanese","Burgers","American","Soul Food","Latest",
         " Rewards","Top Eats","Desserts","Fast Food","Chinese"

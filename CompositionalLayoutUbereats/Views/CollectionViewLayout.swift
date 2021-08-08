@@ -10,7 +10,181 @@ import UIKit
 
 class CollectionViewLayout {
     
+    static let headerid = "header"
+    
+    func createHomeLayout() ->  UICollectionViewLayout {
+        
+        let layout = UICollectionViewCompositionalLayout { [ weak self ]  sectionIndex, environment in
+            
+            if sectionIndex == 0 {
+                
+            return self?.homeCategories()
+            
+            } else if sectionIndex == 3 {
+                    
+                    return self?.scrollhome()
+                }
+            else if sectionIndex == 5 {
+                
+                return self?.scrollHeaderHome()
+            } else if sectionIndex == 7 {
+                
+                return self?.home4Categories()
+            }
+            
+            
+           
+            return self?.createhome1()
+            
+            
+        }
+        
+        return layout
+    
+    }
+    
+    private func homeCategories()->  NSCollectionLayoutSection {
+        
+        //3　itemを作成する
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(0.25), //グループの90%の幅でitemの幅が22.5
+                                                heightDimension: .fractionalHeight(1)))//100% 95
+            
+        
+        //4　1つ90の高さのグループが3つ重なってるのでここでセルの間をあける（幅は90%のグループ）
+            item.contentInsets = .init(top: 0, leading: 1, bottom: 0, trailing: 0)
+            
+            //2 グループを作成　グループのサイズを決める
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                            widthDimension: .fractionalWidth(0.9),//90%fractional（分数）
+                                                            heightDimension: .absolute(90)), //absolute(絶対)90の高さグループ
+                                                           subitems: [item])
+       //*4//ここでも切ることができるよ
+        group.contentInsets.bottom = 1
+        group.contentInsets.top = 1
+        //1　sectionを作成
+        let section = NSCollectionLayoutSection(group: group)
+        //５　スクロールさせたい場合　　スクロールしてない状態だとグループが３つ縦に並んでる状態になる
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets.top = 1
+        section.contentInsets.bottom = 5
+            return section
+            
+        }
+    
+    
+    private func createhome1() -> NSCollectionLayoutSection {
+        
+        //3アイテムを作る
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(1),//100%の幅
+                                            heightDimension: .absolute(200)))//アイテムの高さの絶対値を200
+        //4　heightが1000ポイのが作成されるのでここで切る
+        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
+        //2グループを作る
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                        widthDimension: .fractionalWidth(1),//幅100
+                                                        heightDimension: .estimated(1000)),//グループの推定値1000の幅
+                                                       subitems: [item])
+        group.contentInsets = .init(top: 3, leading: 5, bottom: 0, trailing: 5)
+        //１.セクションを作る
+        let section = NSCollectionLayoutSection(group: group)
+        return section
+    }
+   
+    //Scroll
+    private func scrollhome() -> NSCollectionLayoutSection {
+        //3 アイテムを作成
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(1), //グループの100%
+                                            heightDimension: .absolute(150)))//絶対値150の高さ
+        // 4推定値1000（高さ）と幅が100%のグループが作成されるため　contentInsetsを使って間を開けてアイテムをちゃんと表示させるようにする
+        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
+        
+        //2 グループ作成
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                        widthDimension: .fractionalWidth(1),//幅100%
+                                                        heightDimension: .estimated(1000)), //推定値1000の高さのグループ
+                                                       subitems: [item])
+        //group.contentInsets = .init(top: 3, leading: 5, bottom: 7, trailing: 5)
+        //1 sectionを作成
+        let section = NSCollectionLayoutSection(group: group)
+        //5 縦に並んでるをスクロールさせたい場合horizontal（平行）
+        section.orthogonalScrollingBehavior = .paging
+        return section
+    }
+    
+    private func scrollHeaderHome()-> NSCollectionLayoutSection {
+        
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(1),
+                                            heightDimension: .absolute(150)))
+        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
+                                                        widthDimension: .fractionalWidth(1),
+                                                        heightDimension: .estimated(1000)),
+                                                       subitems: [item])
+        group.contentInsets = .init(top: 3, leading: 5, bottom: 0, trailing: 5)
+        let section = NSCollectionLayoutSection(group: group)
+                section.boundarySupplementaryItems =
+                    [
+                        .init(layoutSize: .init(
+                                widthDimension: .fractionalWidth(0.95),
+                                heightDimension: .absolute(50)),
+                              elementKind: CollectionViewLayout.headerid ,
+                              alignment: .topTrailing)
+        
+                    ]
+
+        section.orthogonalScrollingBehavior = .paging
+        return section
+    }
+    //スクロールありでしかも四分割のせるをスクロール
+    private func home4Categories()->  NSCollectionLayoutSection {
+        
+        //3グループの中にあるアイテムを作成
+        let item = NSCollectionLayoutItem(layoutSize: .init(
+                                            widthDimension: .fractionalWidth(1), //アイテムの幅25％グループの幅の25％
+                                            heightDimension: .absolute(40)))//アイテムの絶対値の高さなの
+        //ここでセルの間をあける　8つの高さ150セルが表示されるため
+        item.contentInsets = .init(top: 0, leading: 5, bottom: 5, trailing: 5)
+        item.accessibilityScroll(.right)
+        //2 グループを作成　グループのサイズを決める
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: .init(
+                                                        widthDimension: .fractionalWidth(0.45), //
+                                                        heightDimension: .estimated(110)), //グループの推定値を110
+                                                       subitem: item,count: 2)//２のアイテム
+        group.contentInsets.trailing = 0
+        //　1セクションを決める
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets.top = 1
+
+            return section
+            
+        }
+    
+    
+    
+    
+    
+   
+    
+    //BrowseVC
+    
     static let headerid1 = "headerid1"
+    
+    func createBrowseLayout() ->  UICollectionViewLayout {
+        
+        let layout = UICollectionViewCompositionalLayout { [ weak self ] sectionIndex, environment in
+            
+                return   self?.browseCategories()
+            
+        }
+        
+        return layout
+    
+    }
     
     private func browseCategories() -> NSCollectionLayoutSection {
         
@@ -35,18 +209,13 @@ class CollectionViewLayout {
             ]
         return section
     }
+  
     
-    func createBrowseLayout() ->  UICollectionViewLayout {
-        
-        let layout = UICollectionViewCompositionalLayout { [ weak self ] sectionIndex, environment in
-            
-                return   self?.browseCategories()
-            
-        }
-        
-        return layout
     
-    }
+    
+    
+    
+    //OrderVC
     
     static let headerid2 = "headerid2"
     func createOrderLayout() ->  UICollectionViewLayout {
@@ -79,113 +248,7 @@ class CollectionViewLayout {
         return layout
     
     }
-    static let headerid = "header"
-    
-    func createHomeLayout() ->  UICollectionViewLayout {
-        
-        let layout = UICollectionViewCompositionalLayout { [ weak self ]  sectionIndex, environment in
-            
-            if sectionIndex == 0 {
-                
-            return self?.homeCategories()
-            
-            } else if sectionIndex == 3 {
-                    
-                    return self?.scrollhome()
-                }
-            else if sectionIndex == 6 {
-                
-                return self?.scrollHeaderHome()
-            }
-            
-            
-            return self?.createhome1()
-            
-            
-        }
-        
-        return layout
-    
-    }
-    
-    private func createhome1() -> NSCollectionLayoutSection {
-        
-        let item = NSCollectionLayoutItem(layoutSize: .init(
-                                            widthDimension: .fractionalWidth(1),
-                                            heightDimension: .absolute(200)))
-        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
-                                                        widthDimension: .fractionalWidth(1),
-                                                        heightDimension: .estimated(1000)),
-                                                       subitems: [item])
-        group.contentInsets = .init(top: 3, leading: 5, bottom: 0, trailing: 5)
-        let section = NSCollectionLayoutSection(group: group)
-        return section
-    }
-    private func homeCategories()->  NSCollectionLayoutSection {
-        
-        let item = NSCollectionLayoutItem(layoutSize: .init(
-                                            widthDimension: .fractionalWidth(0.25), //100%グループの幅
-                                                heightDimension: .fractionalHeight(1)))//100% 125
-            //4　ここでセルの間をあける　三つの高さ200のセルが表示されるため
-            item.contentInsets = .init(top: 10, leading: 1, bottom: 5, trailing: 0)
-            //2 グループを作成　グループのサイズを決める
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
-                                                            widthDimension: .fractionalWidth(0.9),//80%fractional（分数）
-                                                            heightDimension: .absolute(90)), //absolute(絶対)125の高さグループ
-                                                           subitems: [item])
-        //1sectionを作成
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets.top = 1
-
-            return section
-            
-        }
-    //Scroll
-    private func scrollhome() -> NSCollectionLayoutSection {
-        
-        let item = NSCollectionLayoutItem(layoutSize: .init(
-                                            widthDimension: .fractionalWidth(1),
-                                            heightDimension: .absolute(150)))
-        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
-                                                        widthDimension: .fractionalWidth(1),
-                                                        heightDimension: .estimated(1000)),
-                                                       subitems: [item])
-        group.contentInsets = .init(top: 3, leading: 5, bottom: 0, trailing: 5)
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .paging
-        return section
-    }
-    
-    private func scrollHeaderHome()-> NSCollectionLayoutSection {
-        
-        let item = NSCollectionLayoutItem(layoutSize: .init(
-                                            widthDimension: .fractionalWidth(1),
-                                            heightDimension: .absolute(150)))
-        item.contentInsets = .init(top: 2, leading: 1, bottom: 7, trailing: 1)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(
-                                                        widthDimension: .fractionalWidth(1),
-                                                        heightDimension: .estimated(1000)),
-                                                       subitems: [item])
-        group.contentInsets = .init(top: 3, leading: 5, bottom: 0, trailing: 5)
-        let section = NSCollectionLayoutSection(group: group)
-                section.boundarySupplementaryItems =
-                    [
-                        .init(layoutSize: .init(
-                                widthDimension: .fractionalWidth(0.95),
-                                heightDimension: .absolute(50)),
-                              elementKind: CollectionViewLayout.headerid ,
-                              alignment: .topTrailing)
-        
-                    ]
-
-        section.orthogonalScrollingBehavior = .paging
-        return section
-    }
-    
-    
+   
     
 }
 
