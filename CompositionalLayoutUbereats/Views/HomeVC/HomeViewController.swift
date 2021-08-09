@@ -30,6 +30,8 @@ class HomeViewController: UIViewController {
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: HomeViewController.cellid)
         
         collectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: CollectionViewLayout.headerid, withReuseIdentifier: HomeViewController.headerid)
+        
+        
         collectionView.delegate = self
         collectionView.dataSource = self
     
